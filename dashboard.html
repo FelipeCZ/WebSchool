@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h2>Portal</h2>
+        <button id="logout">Sair</button>
+    </header>
+
+    <nav>
+        <a href="calendar.html">Calendário</a>
+        <a href="banners.html">Banners</a>
+        <a href="photos.html">Fotos</a>
+        <a href="messages.html">Mensagens</a>
+    </nav>
+
+    <script type="module">
+        import { requireAuth, logout } from "./assets/auth.js";
+        requireAuth();
+        logout(document.getElementById("logout"));
+    </script>
+</body>
+
+</html>
