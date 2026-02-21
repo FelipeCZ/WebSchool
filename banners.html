@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Banners</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+    <header>
+        <a href="dashboard.html">← Voltar</a>
+    </header>
+
+    <div id="content"></div>
+
+    <script type="module">
+        import { requireAuth } from "./assets/auth.js";
+        import { api } from "./assets/api.js";
+        import { sanitize } from "./assets/sanitize.js";
+
+        requireAuth();
+
+        const banners = await api("/api/announcement/banners");
+
+        document.getElementById("content").innerHTML =
+            banners.map(b =>
+                `<div>
+      <h3>${sanitize(b.title)}</h3>
+      <img src="${b.imageUrl}" />
+    </div>`
+            ).join("");
+    </script>
+</body>
+
+</html>

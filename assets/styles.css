@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Card (login) */
+.card {
+  width: 320px;
+  margin: 100px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1e293b;
+}
+
+/* Botões */
+button {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0f172a;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  gap: 16px;
+  padding: 12px 20px;
+  background-color: #e2e8f0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo */
+#content {
+  padding: 20px;
+}
+
+#content h3 {
+  margin-top: 24px;
+}
+
+#content div {
+  margin-bottom: 10px;
+}
+
+/* Imagens */
+img {
+  max-width: 160px;
+  border-radius: 6px;
+  margin: 6px 6px 6px 0;
+  display: inline-block;
+}
+
+/* Erro */
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 10px;
+}

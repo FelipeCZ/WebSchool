@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mensagens</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+    <header>
+        <a href="dashboard.html">← Voltar</a>
+    </header>
+
+    <div id="content"></div>
+
+    <script type="module">
+        import { requireAuth } from "./assets/auth.js";
+        import { api } from "./assets/api.js";
+        import { sanitize } from "./assets/sanitize.js";
+
+        requireAuth();
+
+        const contacts = await api("/api/chat/contacts");
+
+        content.innerHTML =
+            contacts.map(c => `<div>${sanitize(c.name)}</div>`).join("");
+    </script>
+</body>
+
+</html>
